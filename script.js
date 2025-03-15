@@ -44,7 +44,10 @@ const addLinkToPage = (link) => {
   const link_options = document.createElement("div");
   link_options.classList.add("link-options");
 
-  link_name.innerHTML = `<a href="${link}" target="_blank">${link}</a>`;
+  window.pywebview.api.getVideoName(link).then(response => {
+    link_name.innerHTML = `<a href="${link}" target="_blank">${response}</a>`;
+  });
+
   link_options.innerHTML = `<button class="btn btn-danger" onclick="removeLink('${link}')" title="Remover ${link}"><i class="fa-solid fa-trash"></i></button>`;
 
   link_line.appendChild(link_name);
