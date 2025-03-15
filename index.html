@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Melina</title>
+  <link rel="shortcut icon" href="./assets/melina-logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>  
+
+  <div class="container">
+    <nav>
+      <h1>Melina</h1>
+      
+      <ul>
+        <li>Configurações</li>
+        <li>Ajuda</li>
+      </ul>
+    </nav>
+  
+    <main>
+      <section>
+        <div class="form-group">
+          <label for="">Link do vídeo:</label>
+          <div>
+            <input type="text" name="link" id="input-link" placeholder="Cole o link aqui.." autocomplete="off">
+            <button class="btn" onclick="addLinkToPlaylist('input-link')"><i class="fa-solid fa-circle-plus"></i>Adicionar</button>
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label>Formato de download:</label>
+          <label class="radio-label">
+            <input type="radio" name="formato" value="mp3" class="radio-input" />
+            <span class="radio-text">MP3</span>
+          </label>
+          
+          <label class="radio-label">
+            <input type="radio" name="formato" value="mp4" class="radio-input" />
+            <span class="radio-text">MP4</span>
+          </label>          
+        </div>
+      </section>  
+
+      <table id="added-links" .class="added-links"></table>
+
+      <section class="buttons">
+        <button class="btn"><i class="fa-solid fa-arrow-down"></i> Iniciar Download</button>
+        <button class="btn"><i class="fas fa-eraser"></i> Limpar Playlist</button>
+        <button class="btn"><i class="fa-solid fa-folder"></i>Abrir Downloads</button>
+      </section>
+    </main>    
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
