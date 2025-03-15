@@ -112,8 +112,7 @@ const API_KEY = "AIzaSyD0ZBN8l7YPzeyCNBiYBNKfRjYc-Y4eGK0";
 const getInfoVideo = async (url) => {
   const videoId = url.split("v=")[1]?.split("&")[0]; // Extrair o ID do vídeo
   if (!videoId) {
-    showNotification("error", "Link inválido.");
-    showNotification("error", "Link inválido.") 
+    showNotification("error", "Link inválido.");    
     return;
   } 
 
