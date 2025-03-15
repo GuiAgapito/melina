@@ -112,15 +112,3 @@ const showNotification = (type, message) => {
   }, 3000);
 };
 
-const API_KEY = "AIzaSyD0ZBN8l7YPzeyCNBiYBNKfRjYc-Y4eGK0";
-const getInfoVideo = async (url) => {
-  const videoId = url.split("v=")[1]?.split("&")[0]; // Extrair o ID do vídeo
-  if (!videoId) {
-    showNotification("error", "Link inválido.");
-    return;
-  }
-
-  const response = await fetch(`https://www.googleapis.com/youtube/v3/videos?id=${videoId}&part=snippet&key=${API_KEY}`);
-  const data = await response.json();
-  return data.items.length ? data.items[0].snippet.title : "Vídeo não encontrado";
-}
