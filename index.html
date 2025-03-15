@@ -24,10 +24,10 @@
     <main>
       <section>
         <div class="form-group">
-          <label for="">Link do vídeo:</label>
+          <label for="">Link do vídeo do YouTube:</label>
           <div>
             <input type="text" name="link" id="input-link" placeholder="Cole o link aqui.." autocomplete="off">
-            <button class="btn" onclick="addLinkToPlaylist('input-link')"><i class="fa-solid fa-circle-plus"></i>Adicionar</button>
+            <button class="btn btn-primary" onclick="addLinkToPlaylist('input-link')"><i class="fa-solid fa-circle-plus"></i>Adicionar</button>
           </div>
         </div>
   
@@ -45,12 +45,12 @@
         </div>
       </section>  
 
-      <table id="added-links" .class="added-links"></table>
+      <div id="added-links" class="added-links"></div>
 
       <section class="buttons">
-        <button class="btn"><i class="fa-solid fa-arrow-down"></i> Iniciar Download</button>
-        <button class="btn"><i class="fas fa-eraser"></i> Limpar Playlist</button>
-        <button class="btn"><i class="fa-solid fa-folder"></i>Abrir Downloads</button>
+        <button class="btn btn-primary"><i class="fa-solid fa-arrow-down"></i> Iniciar Download</button>
+        <button class="btn btn-primary"><i class="fas fa-eraser"></i> Limpar Playlist</button>
+        <button class="btn btn-primary"><i class="fa-solid fa-folder"></i>Abrir Downloads</button>
       </section>
     </main>    
   </div>
