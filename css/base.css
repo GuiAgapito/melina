@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+:root {
+  --primary-color: #006fff;
+  --secondary-color: #004a77;
+  --primary-bg-color: #171717;
+  --secondary-bg-color: #282a2c;
+  --primary-text-color: #ffffff;
+  --secondary-text-color: #cccccc;
+
+  --danger-primary-color: #e63946;
+  --danger-secondary-color: #a32630;
+
+  --bg-color-success: #1f3d2b;
+  --text-color-success: #d4edda;
+  --border-color-success: #4caf50;
+  --box-shadow-success: rgba(76, 175, 80, 0.2);
+
+  --bg-color-error: #3a1e1e;
+  --text-color-error: #f8d7da;
+  --border-color-error: #e63946;
+  --box-shadow-error: rgba(230, 57, 70, 0.2);
+
+  --bg-color-warning: #403215;
+  --text-color-warning: #ffebc2;
+  --border-color-warning: #e0a800;
+  --box-shadow-warning: rgba(224, 168, 0, 0.2);
+
+  --bg-color-info: #1e3a56;
+  --text-color-info: #e0f2fe;
+  --border-color-info: #007bff;
+  --box-shadow-info: rgba(0, 123, 255, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lexend', Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+  padding: 20px 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100vw;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+
+.container main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.container main section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group label {
+  font-size: 1.2rem;
+}
+
+.form-group div {
+  display: flex;
+  gap: 20px;
+}
+
+.form-group div input {
+  height: 50px;
+  flex: 1;
+  padding: 10px 15px;
+  border: 3px solid transparent;
+  border-radius: 10px;
+  background-color: var(--secondary-bg-color);
+  color: var(--secondary-text-color);
+  font-size: 1rem;
+  outline: none;
+  transition: all .3s ease;
+}
+
+.container main .form-group div input:focus {
+  border-color: var(--primary-color);
+}
+
+.link-line {
+  transition: all 200ms;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 5px 5px 10px;
+  border-bottom: solid 1px var(--secondary-bg-color);
+}
+
+.link-line:hover {
+  background-color: rgba(255, 255, 255, .05);
+}
+
+.link-name {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.link-name a {
+  color: var(--primary-text-color);
+  text-decoration: none;
+  transition: all .3s ease;
+}
+
+.link-name a:hover {
+  text-decoration: underline;
+  color: var(--primary-color);
+}
+
+.link-options {
+  display: flex;
+  gap: 10px;
+}

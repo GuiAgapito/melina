@@ -1,0 +1,95 @@
+.modals {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: rgba(0, 0, 0, .8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;  
+  transition: all .3s ease;
+  padding: 20px;
+}
+
+.show-modal {
+  display: flex;  
+}
+
+.modal {
+  width: 100%;
+  max-width: 700px;
+  padding: 20px;
+  background-color: var(--secondary-bg-color);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  user-select: none;
+}
+
+.header-modal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+}
+
+.header-modal i {
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+.header-modal i:hover {
+  color: var(--primary-color);
+}
+
+.body-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;  
+}
+
+.form-group label {
+  font-size: 1rem;
+}
+
+.input-directory {
+  background-color: var(--primary-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  border-radius: 10px;
+}
+
+.form-group-directory {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: var(--primary-bg-color);
+  border-radius: 10px;  
+  cursor: pointer;
+}
+
+.form-group-directory input[type="text"] {
+  width: 100%;
+  padding: 0 15px 0 10px;  
+  border-radius: 10px;
+  background-color: transparent;
+  color: var(--secondary-text-color);
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.form-group-directory i {    
+  padding-left: 15px;
+  font-size: 1.5rem;
+  max-width: 20px !important;  
+  color: var(--secondary-text-color);
+}

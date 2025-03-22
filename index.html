@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Melina</title>
   <link rel="shortcut icon" href="./assets/melina-logo.png" type="image/x-icon">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="./css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
@@ -16,8 +16,8 @@
       <h1>Melina</h1>
       
       <ul>
-        <li>Configurações</li>
-        <li>Ajuda</li>
+        <li onclick="toggleModal('config-modal')">Configurações</li>
+        <li onclick="getConfigs()">Ajuda</li>
       </ul>
     </nav>
   
@@ -27,7 +27,7 @@
           <label for="">Link do vídeo do YouTube:</label>
           <div>
             <input type="text" name="link" id="input-link" placeholder="Cole o link aqui.." autocomplete="off">
-            <button class="btn btn-primary" onclick="addLinkToPlaylist('input-link')"><i class="fa-solid fa-circle-plus"></i>Adicionar</button>
+            <button class="btn btn-primary" onclick="addLinkToPlaylist()"><i class="fa-solid fa-circle-plus"></i>Adicionar</button>
           </div>
         </div>
   
@@ -46,15 +46,46 @@
       </section>  
 
       <div id="added-links" class="added-links"></div>
-
-      <section class="buttons">
-        <button class="btn btn-primary"><i class="fa-solid fa-arrow-down"></i> Iniciar Download</button>
-        <button class="btn btn-primary"><i class="fas fa-eraser"></i> Limpar Playlist</button>
-        <button class="btn btn-primary"><i class="fa-solid fa-folder"></i>Abrir Downloads</button>
-      </section>
+      
+      <div class="buttons">
+        <button class="btn btn-primary btn-hidden" id="start-download"><i class="fa-solid fa-arrow-down"></i> Iniciar Download</button>
+        <button class="btn btn-primary btn-hidden" id="clear-playlist"><i class="fas fa-eraser"></i> Limpar Playlist</button>
+        <button class="btn btn-primary btn-hidden" id="open-downloads"><i class="fa-solid fa-folder"></i>Abrir Downloads</button>        
+      </div>              
     </main>    
   </div>
 
-  <script src="script.js"></script>
+  <div class="modals" id="config-modal">
+    <div class="modal" id="config-modal">
+      <div class="header-modal">
+        <h3>Configurações</h3>
+        <i class="fa-solid fa-xmark fa-lg" onclick="toggleModal('config-modal')"></i>
+      </div>      
+
+      <div class="body-modal">
+        <div class="form-group">
+          <label>Local de download:</label>
+          <div class="form-group-directory" onclick="setDownloadPath()">
+            <i class="fa-solid fa-folder lg"></i>             
+            <input type="text" name="" id="select-download-path" value="" readonly>
+          </div>                    
+        </div>
+
+        <div class="form-group">
+          <label for="">Tema:</label>
+          <label class="radio-label">
+            <input type="radio" name="theme" value="light" id="theme-light" class="radio-input" onchange="setTheme(this)"/>
+            <span class="radio-text">Claro</span>
+          </label>  
+          <label class="radio-label">
+            <input type="radio" name="theme" value="dark" id="theme-dark" class="radio-input" onchange="setTheme(this)"/>
+            <span class="radio-text">Escuro</span>
+          </label>  
+        </div>
+      </div> 
+    </div>
+  </div>
+
+  <script src="./js/main.js"></script>
 </body>
 </html>
