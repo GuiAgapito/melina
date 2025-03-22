@@ -69,7 +69,7 @@ const addLinkToPlaylist = () => {
 
   // Verifica se é um link do youtube
   if (!value.startsWith("https://www.youtube.com/watch?v=")) {
-    notification("error", "Por favor, insira um link do YouTube.");  
+    showNotification("error", "Por favor, insira um link do YouTube.");  
     return;
   }
 
@@ -175,28 +175,43 @@ const setDownloadPath = () => {
 
 // Selecionar tema
 const setTheme = (input) => {
-  const theme_selected = input.value;  
+  const theme_selected = input.value;      
+  changeTheme(theme_selected);
   window.pywebview.api.setConfig("theme", theme_selected)  
   .catch(function(error) {
-    showNotification("error", `Erro: ${error}`);
-  });
+    showNotification("error", `Erro: ${error}`);    
+  });    
 }
 
-// Buscar configs
+// Buscar configs como o tema e o local de download das mídias
 const getConfigs = () => {
   const inputDownloadTheme = document.getElementById("select-download-path");  
-  
+  changeTheme("dark");
   window.pywebview.api.getConfig().then(function(config){
     theme = config.theme;
-    download_path = config.download_path;
+    download_path = config.download_path;    
 
     inputDownloadTheme.value = download_path;
     const inputTheme = document.getElementById(`theme-${theme}`);
-    inputTheme.checked = true;
-    
+    inputTheme.checked = true; 
+    changeTheme(theme);
   }).catch(function(error) {
     showNotification("error", `Erro: ${error}`);    
   })          
+}
+
+// Alterar o tema
+const changeTheme = (theme) => {
+  let arquive_theme = theme === "light" ? "light-mode.css" : "dark-mode.css";
+  const existing_link = document.querySelector("link[href*='dark-mode.css'], link[href*='light-mode.css']");
+  if (existing_link) {
+    existing_link.remove();
+  }
+
+  const link_theme = document.createElement("link");
+  link_theme.rel = "stylesheet";
+  link_theme.href = `./../css/${arquive_theme}`;
+  document.head.appendChild(link_theme);   
 }
 
 window.onload = function() {

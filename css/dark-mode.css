@@ -1,0 +1,88 @@
+body {
+  background-color: var(--dark-primary-bg-color);
+  color: var(--dark-primary-text-color);
+}
+
+.form-group div input {
+  background-color: var(--dark-secondary-bg-color);
+  color: var(--dark-secondary-text-color);  
+}
+
+.container main .form-group div input:focus {
+  border-color: var(--primary-color);
+}
+
+.link-line {
+  border-bottom: solid 1px var(--dark-secondary-bg-color);
+}
+
+.link-line:hover {
+  background-color: var(--dark-hover-link-line);
+}
+
+.link-name a:hover {
+  color: var(--dark-primary-color);
+}
+
+.container nav i:hover {
+  color: var(--primary-color);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--dark-primary-text-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+}
+
+.btn-danger {
+  background-color: var(--danger-primary-color);
+  color: var(--text-color-error);
+}
+
+.btn-danger:hover {
+  background-color: var(--danger-secondary-color);
+}
+
+.radio-label {
+  color: var(--dark-primary-text-color);
+}
+
+.radio-input {
+  border: 2px solid var(--primary-color);
+}
+
+.radio-input::before {
+  background: var(--primary-color);
+}
+
+.modals {
+  background-color: var(--dark-bg-container-modal);
+}
+
+.modal {
+  background-color: var(--dark-secondary-bg-color);
+}
+
+.header-modal i:hover {
+  color: var(--primary-color);
+}
+
+.input-directory {
+  background-color: var(--dark-primary-bg-color);
+}
+
+.form-group-directory {
+  background-color: var(--dark-primary-bg-color)
+}
+
+.form-group-directory input[type="text"] {
+  color: var(--dark-secondary-text-color);
+  background-color: transparent;  
+}
+
+.form-group-directory i {
+  color: var(--dark-secondary-text-color);
+}

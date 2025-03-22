@@ -7,18 +7,15 @@
   <link rel="shortcut icon" href="./assets/melina-logo.png" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="./css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link type="text/css" rel="stylesheet" href="./css/dark-mode.css">  
 </head>
 
 <body>  
 
   <div class="container">
     <nav>
-      <h1>Melina</h1>
-      
-      <ul>
-        <li onclick="toggleModal('config-modal')">Configurações</li>
-        <li onclick="getConfigs()">Ajuda</li>
-      </ul>
+      <img src="./assets/melina-logo-page.png" alt="">
+      <i class="fa-solid fa-gear fa-lg" onclick="toggleModal('config-modal')" title="Configurações"></i>          
     </nav>
   
     <main>
@@ -27,7 +24,7 @@
           <label for="">Link do vídeo do YouTube:</label>
           <div>
             <input type="text" name="link" id="input-link" placeholder="Cole o link aqui.." autocomplete="off">
-            <button class="btn btn-primary" onclick="addLinkToPlaylist()"><i class="fa-solid fa-circle-plus"></i>Adicionar</button>
+            <button class="btn btn-primary" onclick="addLinkToPlaylist()"><i class="fa-solid fa-circle-plus" title="Adicionar link"></i>Adicionar</button>
           </div>
         </div>
   

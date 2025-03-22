@@ -21,24 +21,6 @@
   cursor: not-allowed;  
 }
 
-.btn-primary {
-  background-color: var(--primary-color);
-  color: var(--primary-text-color);
-}
-
-.btn-primary:hover {
-  background-color: var(--secondary-color);
-}
-
-.btn-danger {
-  background-color: var(--danger-primary-color);
-  color: var(--text-color-error);
-}
-
-.btn-danger:hover {
-  background-color: var(--danger-secondary-color);
-}
-
 .buttons {
   position: fixed;
   bottom: 20px;

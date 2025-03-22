@@ -3,15 +3,14 @@
   align-items: center;
   cursor: pointer;
   gap: 8px;
-  font-size: 16px;
-  color: var(--primary-text-color);
+  font-size: 16px;  
 }
 
 .radio-input {
+  cursor: pointer;
   appearance: none;
   width: 18px;
-  height: 18px;
-  border: 2px solid var(--primary-color);
+  height: 18px;  
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -24,8 +23,7 @@
 .radio-input::before {
   content: "";
   width: 10px;
-  height: 10px;
-  background: var(--primary-color);
+  height: 10px;  
   border-radius: 50%;
   transform: scale(0);
   transition: all 0.3s ease-in-out;

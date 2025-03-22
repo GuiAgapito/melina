@@ -3,11 +3,25 @@
 :root {
   --primary-color: #006fff;
   --secondary-color: #004a77;
-  --primary-bg-color: #171717;
-  --secondary-bg-color: #282a2c;
-  --primary-text-color: #ffffff;
-  --secondary-text-color: #cccccc;
 
+  --dark-primary-bg-color: #171717;
+  --light-primary-bg-color: #eeeeee; 
+
+  --dark-secondary-bg-color: #282a2c;
+  --light-secondary-bg-color: #cecece;
+
+  --dark-primary-text-color: #ffffff;
+  --light-primary-text-color: #000000;
+
+  --dark-secondary-text-color: #cccccc
+  --light-secondary-text-color: #555555
+
+  --dark-hover-link-line: rgba(255, 255, 255, .05);
+  --light-hover-link-line: rgba(0, 0, 0, .05);
+
+  --dark-bg-container-modal: rgba(0, 0, 0, .6);
+  --light-bg-container-modal: rgba(150, 150, 150, .9);
+  
   --danger-primary-color: #e63946;
   --danger-secondary-color: #a32630;
 
@@ -42,8 +56,6 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--primary-bg-color);
-  color: var(--primary-text-color);
   padding: 20px 30px;
   display: flex;
   justify-content: center;
@@ -91,15 +103,9 @@ body {
   padding: 10px 15px;
   border: 3px solid transparent;
   border-radius: 10px;
-  background-color: var(--secondary-bg-color);
-  color: var(--secondary-text-color);
   font-size: 1rem;
   outline: none;
   transition: all .3s ease;
-}
-
-.container main .form-group div input:focus {
-  border-color: var(--primary-color);
 }
 
 .link-line {
@@ -108,13 +114,9 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 5px 5px 5px 10px;
-  border-bottom: solid 1px var(--secondary-bg-color);
+  padding: 5px 5px 5px 10px;  
 }
 
-.link-line:hover {
-  background-color: rgba(255, 255, 255, .05);
-}
 
 .link-name {
   flex: 1;
@@ -130,8 +132,7 @@ body {
 }
 
 .link-name a:hover {
-  text-decoration: underline;
-  color: var(--primary-color);
+  text-decoration: underline;  
 }
 
 .link-options {
